@@ -35,12 +35,19 @@ if (contactForm) {
         const formData = {
             nome: contactForm.nome.value.trim(),
             email: contactForm.email.value.trim(),
+            telefone: contactForm.telefone.value.trim(),
+            data: contactForm.data.value.trim(),
             mensagem: contactForm.mensagem.value.trim()
         };
 
         // Validação básica extra
-        if (!formData.nome || !formData.email || !formData.mensagem) {
-            showStatus("Por favor preencha todos os campos.", "error");
+        if (!formData.nome || !formData.telefone || !formData.mensagem) {
+            showStatus("Por favor preencha nome, telemóvel e mensagem.", "error");
+            return;
+        }
+
+        if (formData.email && !isValidEmail(formData.email)) {
+            showStatus("O e-mail introduzido não é válido.", "error");
             return;
         }
 
@@ -80,6 +87,10 @@ if (contactForm) {
     });
 }
 
+function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
 function showStatus(message, type) {
     if (!statusEl) return;
     statusEl.textContent = message || "";
@@ -92,3 +103,36 @@ function setSendingState(isSending) {
     submitBtn.disabled = isSending;
     submitBtn.textContent = isSending ? "A enviar..." : "Enviar";
 }
+
+// Botões "Encomendar bolo como este"
+const orderButtons = document.querySelectorAll(".order-cake-btn");
+
+orderButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        const form = document.getElementById("contact-form");
+        const messageField = document.getElementById("mensagem");
+
+        if (!form || !messageField) {
+            console.warn("Formulário de contacto não encontrado.");
+            return;
+        }
+
+        const template =
+            btn.dataset.cakeMessage ||
+            `Gostaria de encomendar um bolo como o "${btn.dataset.cakeName || "bolo do portfólio"}".`;
+
+        messageField.value = template;
+
+        // scroll suave até ao formulário
+        form.scrollIntoView({ behavior: "smooth", block: "start" });
+
+        // pequeno delay para o scroll terminar antes de focar
+        setTimeout(() => {
+            messageField.focus();
+
+            if (!contactForm.nome.value || !contactForm.telefone.value) {
+                submitBtn.click();
+            }
+        }, 600);
+    });
+});

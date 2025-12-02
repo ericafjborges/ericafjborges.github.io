@@ -444,3 +444,233 @@ body {
     .form-status.error {
         color: #b3392f;
     }
+.contact-section {
+    margin: 3rem 0;
+}
+
+    .contact-form .form-group {
+        margin-bottom: 1.2rem;
+    }
+
+    .contact-form label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 0.4rem;
+    }
+
+    .contact-form .required {
+        color: #c7512a;
+        margin-left: 0.2rem;
+    }
+
+    .contact-form .optional {
+        font-weight: 400;
+        font-size: 0.85rem;
+        color: #777;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        border: 1px solid #e1cbb9;
+        border-radius: 8px;
+        padding: 0.7rem 0.9rem;
+        font-size: 1rem;
+        font-family: inherit;
+        background: #fff;
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #c46a35;
+            box-shadow: 0 0 0 2px rgba(196, 106, 53, 0.2);
+        }
+
+.btn-primary {
+    display: inline-block;
+    border: none;
+    padding: 0.75rem 1.8rem;
+    border-radius: 999px;
+    background: #c46a35;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.15s ease;
+}
+
+    .btn-primary:hover {
+        background: #b35927;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transform: translateY(-1px);
+    }
+
+    .btn-primary:disabled {
+        opacity: 0.6;
+        cursor: default;
+        box-shadow: none;
+        transform: none;
+    }
+
+.cake-group {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 2fr);
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+@media (max-width: 900px) {
+    .cake-group {
+        grid-template-columns: 1fr;
+    }
+}
+
+    .cake-group-info h3 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+
+.cake-group-intro {
+    margin-bottom: 0.8rem;
+    color: #5c4b40;
+}
+
+.cake-features {
+    list-style: disc;
+    padding-left: 1.3rem;
+    margin: 0 0 1.2rem 0;
+    color: #5c4b40;
+}
+
+    .cake-features li + li {
+        margin-top: 0.25rem;
+    }
+
+.cake-group-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1.2rem;
+}
+
+.cake-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+}
+
+    .cake-card img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+.cake-card-body {
+    padding: 0.9rem 1rem 1.1rem;
+}
+
+    .cake-card-body h4 {
+        margin: 0 0 0.4rem 0;
+    }
+
+    .cake-card-body p {
+        margin: 0;
+        font-size: 0.95rem;
+        color: #624b3a;
+    }
+
+/* Botão secundário (encomendar bolo como este) */
+
+.btn-secondary {
+    display: inline-block;
+    border-radius: 999px;
+    padding: 0.7rem 1.6rem;
+    border: 1px solid #c46a35;
+    background: #fff;
+    color: #c46a35;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, transform 0.1s ease;
+}
+
+    .btn-secondary:hover {
+        background: #c46a35;
+        color: #fff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        transform: translateY(-1px);
+    }
+
+    .btn-secondary:active {
+        transform: translateY(0);
+        box-shadow: none;
+    }
+
+.order-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.8rem;
+}
+
+    .order-options .btn-secondary {
+        flex: 1 1 180px;
+        text-align: center;
+    }
+.cake-group {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 2fr);
+    gap: 2rem;
+    align-items: flex-start;
+    /* NOVO: cartão único */
+    background: #fff7f0;
+    border-radius: 16px;
+    padding: 1.6rem 1.8rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 900px) {
+    .cake-group {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cake-group-info {
+    /* sem cartão extra, só layout interno */
+    padding-right: 1rem;
+}
+
+@media (max-width: 900px) {
+    .cake-group-info {
+        padding-right: 0;
+    }
+}
+
+.cake-group-intro {
+    margin-bottom: 0.8rem;
+    color: #5c4b40;
+}
+
+.cake-features {
+    list-style: disc;
+    padding-left: 1.3rem;
+    margin: 0 0 1.2rem 0;
+    color: #5c4b40;
+}
+
+    .cake-features li + li {
+        margin-top: 0.25rem;
+    }
+
+.cake-group-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1.2rem;
+}

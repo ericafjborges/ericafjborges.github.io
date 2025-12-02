@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bolos Artesanais – Portfólio</title>
+    <title>Bolos Artesanais – Amor de Mãe</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
     <meta name="description" content="Bolos artesanais feitos em casa, com atenção ao detalhe e muito sabor.">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -13,7 +13,7 @@
     <header class="top-bar">
         <div class="brand">
             <!-- Quando tiverem nome, trocam aqui -->
-            <span class="logo">Bolos Artesanais</span>
+            <span class="logo">Bolos Artesanais – Amor de Mãe</span>
             <span class="tagline">Feitos em casa, com cuidado em cada fatia</span>
         </div>
 
@@ -90,39 +90,69 @@
                     novos trabalhos forem feitos.
                 </p>
 
-                <div class="gallery">
-                    <figure class="card">
-                        <img src="assets/img/bolo-1.jpg" alt="Bolo de chocolate com cobertura brilhante">
-                        <figcaption>
-                            <h3>Bolo de chocolate</h3>
-                            <p>Massa fofa de chocolate com cobertura generosa de chocolate derretido.</p>
-                        </figcaption>
-                    </figure>
+                <!-- Grupo: Bolo de Chocolate -->
+                <section class="cake-group" id="bolo-chocolate">
+                    <div class="cake-group-info">
+                        <h3>Bolo de chocolate</h3>
+                        <p class="cake-group-intro">
+                            Bolo clássico de chocolate, ideal para aniversários e momentos em família.
+                        </p>
+                        <ul class="cake-features">
+                            <li>Massa fofa de chocolate.</li>
+                            <li>Cobertura generosa de chocolate derretido.</li>
+                            <li>Formato em anel, perfeito para partilhar.</li>
+                            <li>Apresentação rústica e caseira.</li>
+                        </ul>
 
-                    <figure class="card">
-                        <img src="assets/img/bolo-2.jpg" alt="Bolo de chocolate visto de perto">
-                        <figcaption>
-                            <h3>Detalhe da cobertura</h3>
-                            <p>Textura rústica e caseira, ideal para quem gosta de muito chocolate.</p>
-                        </figcaption>
-                    </figure>
+                        <div class="order-options">
+                            <button class="btn-secondary order-cake-btn"
+                                    data-cake-name="Bolo de chocolate"
+                                    data-cake-message="Gostaria de encomendar um bolo de chocolate como o do portfólio (massa fofa de chocolate, cobertura generosa de chocolate derretido, formato em anel). Peso aproximado de 2 kg.">
+                                Encomendar este bolo (Grande)
+                            </button>
 
-                    <figure class="card">
-                        <img src="assets/img/bolo-3.jpg" alt="Bolo de chocolate artesanal em prato dourado">
-                        <figcaption>
-                            <h3>Bolo inteiro</h3>
-                            <p>Apresentação simples e elegante, perfeito para partilhar em família.</p>
-                        </figcaption>
-                    </figure>
+                            <button class="btn-secondary order-cake-btn"
+                                    data-cake-name="Bolo de chocolate"
+                                    data-cake-message="Gostaria de encomendar um bolo de chocolate como o do portfólio (massa fofa de chocolate, cobertura generosa de chocolate derretido, formato em anel). Peso aproximado de 1 kg.">
+                                Encomendar este bolo (Pequeno)
+                            </button>
+                        </div>
+                    </div>
 
-                    <figure class="card">
-                        <img src="assets/img/bolo-4.jpg" alt="Bolo de chocolate visto de cima">
-                        <figcaption>
-                            <h3>Vista de topo</h3>
-                            <p>Formato em anel com cobertura brilhante a envolver todo o bolo.</p>
-                        </figcaption>
-                    </figure>
-                </div>
+                    <div class="cake-group-gallery">
+                        <article class="cake-card">
+                            <img src="assets/img/bolo-chocolate-massa.jpg" alt="Detalhe da massa do bolo">
+                            <div class="cake-card-body">
+                                <h4>Bolo de chocolate</h4>
+                                <p>Massa fofa de chocolate com cobertura generosa de chocolate derretido.</p>
+                            </div>
+                        </article>
+
+                        <article class="cake-card">
+                            <img src="assets/img/bolo-chocolate-cobertura.jpg" alt="Detalhe da cobertura de chocolate">
+                            <div class="cake-card-body">
+                                <h4>Detalhe da cobertura</h4>
+                                <p>Textura rústica e caseira, ideal para quem gosta de muito chocolate.</p>
+                            </div>
+                        </article>
+
+                        <article class="cake-card">
+                            <img src="assets/img/bolo-chocolate-inteiro.jpg" alt="Bolo inteiro de chocolate">
+                            <div class="cake-card-body">
+                                <h4>Bolo inteiro</h4>
+                                <p>Apresentação simples e elegante, perfeita para partilhar em família.</p>
+                            </div>
+                        </article>
+
+                        <article class="cake-card">
+                            <img src="assets/img/bolo-chocolate-topo.jpg" alt="Bolo de chocolate visto de topo">
+                            <div class="cake-card-body">
+                                <h4>Vista de topo</h4>
+                                <p>Formato em anel com cobertura brilhante a envolver todo o bolo.</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
             </div>
         </section>
 
@@ -145,22 +175,17 @@
                 </div>
                 <div class="highlight-box">
                     <h3>Pedido rápido</h3>
-                    <p>Quando estiverem prontos, podem trocar estes “#PLACEHOLDER” pelos contactos reais:</p>
                     <ul class="contact-list">
-                        <li><strong>WhatsApp:</strong> <span>#colocar_número_aqui</span></li>
-                        <li><strong>Instagram:</strong> <span>@colocar_perfil_aqui</span></li>
-                        <li><strong>E-mail:</strong> <span>colocar-email@aqui.com</span></li>
+                        <li><strong>WhatsApp:</strong> <span><a href="mailto:00351913384104">913 384 104</a></span></li>
+                        <!--<li><strong>Instagram:</strong> <span>@colocar_perfil_aqui</span></li>-->
+                        <li><strong>E-mail:</strong> <span><a href="mailto:bolos@amordemae.pt">bolos@amordemae.pt</a></span></li>
                     </ul>
-                    <p class="note">
-                        Dica: se ainda não têm Instagram da marca, podem criar e usar o site como
-                        “vitrine” estática e o Instagram para atualizações do dia-a-dia.
-                    </p>
                 </div>
             </div>
         </section>
 
         <!-- CONTACTOS -->
-        <section id="contactos" class="section">
+        <section id="contactos" class="section contact-section">
             <div class="container">
                 <h2>Contactos</h2>
                 <p class="section-intro">
@@ -171,19 +196,29 @@
                 <div class="contact-layout">
                     <form class="contact-form" id="contact-form">
                         <div class="field">
-                            <label for="nome">Nome</label>
-                            <input type="text" id="nome" name="nome" required>
+                            <label for="nome">Nome <span class="required">*</span></label>
+                            <input type="text" id="nome" name="nome" placeholder="Ex.: Ana Paula" required>
                         </div>
 
                         <div class="field">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" name="email" required>
+                            <label for="data">Data pretendida <span class="optional">(opcional)</span></label>
+                            <input type="date" id="data" name="data" placeholder="dd/mm/aaaa">
                         </div>
 
                         <div class="field">
-                            <label for="mensagem">Mensagem</label>
+                            <label for="telefone">Telemóvel <span class="required">*</span></label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="Ex.: 912 345 678" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="email">E-mail <span class="optional">(opcional)</span></label>
+                            <input type="email" id="email" name="email" placeholder="Ex.: ana.paula@example.com">
+                        </div>
+
+                        <div class="field">
+                            <label for="mensagem">Mensagem <span class="required">*</span></label>
                             <textarea id="mensagem" name="mensagem" rows="4" required
-                                      placeholder="Ex.: Gostaria de encomendar um bolo de chocolate para dia 12..."></textarea>
+                                      placeholder="Ex.: Gostaria de encomendar um bolo de chocolate para dia 12, de cerca de 2Kg..."></textarea>
                         </div>
 
                         <button type="submit" class="btn primary" id="contact-submit">
@@ -191,8 +226,8 @@
                         </button>
 
                         <p class="form-note">
-                            Os dados deste formulário são enviados de forma segura para o nosso servidor
-                            e utilizados apenas para responder ao seu pedido.
+                            Os dados deste formulário são utilizados apenas para responder ao seu pedido.
+                            Entraremos em contacto preferencialmente por WhatsApp para combinar todos os detalhes.
                         </p>
 
                         <p id="form-status" class="form-status" aria-live="polite"></p>
@@ -202,14 +237,10 @@
                     <div class="contact-info">
                         <h3>Contactos diretos</h3>
                         <ul class="contact-list">
-                            <li><strong>WhatsApp:</strong> <span>#colocar_número_aqui</span></li>
-                            <li><strong>Instagram:</strong> <span>@colocar_perfil_aqui</span></li>
-                            <li><strong>E-mail:</strong> <span>colocar-email@aqui.com</span></li>
+                            <li><strong>WhatsApp:</strong> <span><a href="mailto:00351913384104">913 384 104</a></span></li>
+                            <!--<li><strong>Instagram:</strong> <span>@colocar_perfil_aqui</span></li>-->
+                            <li><strong>E-mail:</strong> <span><a href="mailto:bolos@amordemae.pt">bolos@amordemae.pt</a></span></li>
                         </ul>
-                        <p>
-                            Também podes partilhar este site diretamente com quem quiser ver os trabalhos:
-                            basta enviar o link do GitHub Pages.
-                        </p>
                     </div>
                 </div>
             </div>
@@ -219,7 +250,7 @@
     <footer class="footer">
         <div class="container footer-content">
             <p>
-                © <span id="year"></span> Bolos Artesanais
+                © <span id="year">2025</span> Bolos Artesanais - Amor de Mãe
             </p>
         </div>
     </footer>
