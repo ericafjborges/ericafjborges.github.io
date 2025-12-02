@@ -431,3 +431,16 @@ body {
         align-items: flex-start;
     }
 }
+.form-status {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    min-height: 1.2em;
+}
+
+    .form-status.ok {
+        color: #2f7b3b;
+    }
+
+    .form-status.error {
+        color: #b3392f;
+    }
