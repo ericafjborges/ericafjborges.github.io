@@ -15,7 +15,7 @@ if (navToggle && nav) {
     });
 }
 
-// Ano autom·tico no footer
+// Ano autom√°tico no footer
 const yearSpan = document.getElementById("year");
 if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
@@ -31,14 +31,14 @@ if (contactForm) {
     contactForm.addEventListener("submit", async (e) => {
         e.preventDefault();
 
-        // Dados do formul·rio
+        // Dados do formul√°rio
         const formData = {
             nome: contactForm.nome.value.trim(),
             email: contactForm.email.value.trim(),
             mensagem: contactForm.mensagem.value.trim()
         };
 
-        // ValidaÁ„o b·sica extra
+        // Valida√ß√£o b√°sica extra
         if (!formData.nome || !formData.email || !formData.mensagem) {
             showStatus("Por favor preencha todos os campos.", "error");
             return;
@@ -71,7 +71,7 @@ if (contactForm) {
         } catch (err) {
             console.error(err);
             showStatus(
-                "N„o foi possÌvel contactar o servidor. Verifique a ligaÁ„o e tente de novo.",
+                "N√£o foi poss√≠vel contactar o servidor. Verifique a liga√ß√£o e tente de novo.",
                 "error"
             );
         } finally {
