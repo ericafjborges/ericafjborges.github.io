@@ -27,12 +27,12 @@ body {
 }
 
 .section {
-    padding: 4rem 0;
+    padding: 2rem;
     background: #fdfaf6;
 }
 
 .section-light {
-    padding: 4rem 0;
+    padding: 2rem;
     background: #fff9f2;
 }
 
@@ -42,7 +42,6 @@ body {
 }
 
 .section-intro {
-    max-width: 620px;
     margin-bottom: 2rem;
 }
 
@@ -63,9 +62,23 @@ body {
 
 .brand {
     display: flex;
+    align-items: center;
+    gap: 0.75rem; 
+}
+
+.brand-logo {
+    width: 52px; 
+    height: 52px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.brand-text {
+    display: flex;
     flex-direction: column;
     gap: 0.1rem;
 }
+
 
 .logo {
     font-weight: 700;
@@ -123,7 +136,7 @@ body {
     grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
     align-items: center;
     gap: 2.5rem;
-    padding: 4rem 1.5rem 3rem;
+    padding: 2rem;
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -155,7 +168,7 @@ body {
 }
 
     .hero-image img {
-        width: 100%;
+        width: 80%;
         height: auto;
         display: block;
         border-radius: 999px;
@@ -178,27 +191,40 @@ body {
     white-space: nowrap;
 }
 
-    .btn.primary {
+    /* Primário (btn primary e btn-primary) */
+    .btn.primary,
+    .btn-primary {
         background: #b46b3c;
         color: #fff9f2;
         border-color: #b46b3c;
     }
 
-        .btn.primary:hover {
+        .btn.primary:hover,
+        .btn-primary:hover {
             background: #9d5930;
             border-color: #9d5930;
             transform: translateY(-1px);
         }
 
-    .btn.secondary {
+    /* Secundário (btn secondary e btn-secondary) */
+    .btn.secondary,
+    .btn-secondary {
         background: #fff9f2;
         color: #5a3c2a;
         border-color: #dcb894;
     }
 
-        .btn.secondary:hover {
+        .btn.secondary:hover,
+        .btn-secondary:hover {
             background: #ffe6c7;
         }
+
+.order-options .btn.primary,
+.order-options .btn.secondary {
+    flex: 1 1 180px;
+    text-align: center;
+}
+
 
 /* ====== LAYOUTS ====== */
 
@@ -213,7 +239,7 @@ body {
     background: #fff;
     border-radius: 1rem;
     border: 1px solid #f0dfcf;
-    padding: 1.5rem;
+    padding: 2rem;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04);
 }
 
@@ -294,7 +320,7 @@ body {
     background: #fff;
     border-radius: 1rem;
     border: 1px solid #f0dfcf;
-    padding: 1.5rem;
+    padding: 2rem;
     box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
 }
 
@@ -445,7 +471,7 @@ body {
         color: #b3392f;
     }
 .contact-section {
-    margin: 3rem 0;
+    padding: 2rem;
 }
 
     .contact-form .form-group {
@@ -484,35 +510,9 @@ body {
         .contact-form input:focus,
         .contact-form textarea:focus {
             outline: none;
-            border-color: #c46a35;
+            border-color: #b46b3c;
             box-shadow: 0 0 0 2px rgba(196, 106, 53, 0.2);
         }
-
-.btn-primary {
-    display: inline-block;
-    border: none;
-    padding: 0.75rem 1.8rem;
-    border-radius: 999px;
-    background: #c46a35;
-    color: #fff;
-    font-weight: 600;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.15s ease;
-}
-
-    .btn-primary:hover {
-        background: #b35927;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        transform: translateY(-1px);
-    }
-
-    .btn-primary:disabled {
-        opacity: 0.6;
-        cursor: default;
-        box-shadow: none;
-        transform: none;
-    }
 
 .cake-group {
     margin-top: 2.5rem;
@@ -585,52 +585,20 @@ body {
         color: #624b3a;
     }
 
-/* Botão secundário (encomendar bolo como este) */
-
-.btn-secondary {
-    display: inline-block;
-    border-radius: 999px;
-    padding: 0.7rem 1.6rem;
-    border: 1px solid #c46a35;
-    background: #fff;
-    color: #c46a35;
-    font-weight: 600;
-    font-size: 0.95rem;
-    cursor: pointer;
-    transition: background 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, transform 0.1s ease;
-}
-
-    .btn-secondary:hover {
-        background: #c46a35;
-        color: #fff;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-        transform: translateY(-1px);
-    }
-
-    .btn-secondary:active {
-        transform: translateY(0);
-        box-shadow: none;
-    }
-
 .order-options {
     display: flex;
     flex-wrap: wrap;
     gap: 0.6rem;
     margin-top: 0.8rem;
 }
-
-    .order-options .btn-secondary {
-        flex: 1 1 180px;
-        text-align: center;
-    }
 .cake-group {
     margin-top: 2.5rem;
-    display: grid;
+    display: block;
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 2fr);
     gap: 2rem;
     align-items: flex-start;
     /* NOVO: cartão único */
-    background: #fff7f0;
+    background: linear-gradient(180deg, rgb(248 232 201), #FDF8ED);
     border-radius: 16px;
     padding: 1.6rem 1.8rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -640,17 +608,14 @@ body {
     .cake-group {
         grid-template-columns: 1fr;
     }
+    .cake-group-info {
+        padding-right: 0;
+    }
 }
 
 .cake-group-info {
     /* sem cartão extra, só layout interno */
     padding-right: 1rem;
-}
-
-@media (max-width: 900px) {
-    .cake-group-info {
-        padding-right: 0;
-    }
 }
 
 .cake-group-intro {
@@ -674,3 +639,4 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     gap: 1.2rem;
 }
+
