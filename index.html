@@ -12,15 +12,18 @@
 <body>
     <header class="top-bar">
         <div class="brand">
-            <img src="assets/img/logo.png"
-                 alt="Logótipo Amor de Mãe – Bolos Artesanais"
-                 class="brand-logo">
+            <a href="#hero">
+                <img src="assets/img/logo.png"
+                     alt="Logótipo Amor de Mãe – Bolos Artesanais"
+                     class="brand-logo">
+            </a>
 
             <div class="brand-text">
-                <span class="logo desktop-only">Bolos Artesanais – Amor de Mãe</span>
-                <span class="logo mobile-only">Bolos Artesanais</span>
-                <span class="logo mobile-only">Amor de Mãe</span>
-                <span class="tagline">Feitos em casa, com cuidado e amor em cada fatia</span>
+                <span class="logo">Bolos Artesanais</span>
+                <span class="logo">Amor de Mãe</span>
+                <span class="tagline desktop-only">Feitos em casa, com cuidado e amor em cada fatia</span>
+                <span class="tagline mobile-only">Feitos em casa, com cuidado e amor</span>
+                <span class="tagline mobile-only">em cada fatia</span>
             </div>
         </div>
 
@@ -47,7 +50,7 @@
                     Cada bolo é preparado de forma caseira, com tempo, carinho e foco no sabor.
                     Ideal para aniversários, pequenos eventos ou simplesmente para adoçar o dia.
                 </p>
-                <div class="hero-actions">
+                <div class="hero-actions same-line">
                     <a href="#galeria" class="btn primary">Ver trabalhos</a>
                     <a href="#encomendas" class="btn secondary">Fazer encomenda</a>
                 </div>
@@ -113,6 +116,7 @@
                             <div class="cake-card-body">
                                 <h4>Bolo de chocolate</h4>
                                 <p>Massa fofa de chocolate com cobertura generosa de chocolate derretido.</p>
+                                <!--<p class="mobile-only">Textura rústica e caseira, ideal para quem gosta de muito chocolate.</p>-->
                             </div>
                         </article>
 
@@ -129,6 +133,7 @@
                             <div class="cake-card-body">
                                 <h4>Bolo inteiro</h4>
                                 <p>Apresentação simples e elegante, perfeita para partilhar em família.</p>
+                                <!--<p class="mobile-only">Formato em anel com cobertura brilhante a envolver todo o bolo.</p>-->
                             </div>
                         </article>
 
@@ -146,13 +151,13 @@
                             <button class="btn primary order-cake-btn"
                                     data-cake-name="Bolo de chocolate"
                                     data-cake-message="Gostaria de encomendar um bolo de chocolate como o do portfólio (massa fofa de chocolate, cobertura generosa de chocolate derretido, formato em anel). Peso aproximado de 2 kg.">
-                                Encomendar este bolo (Grande)
+                                Encomendar (Grande)
                             </button>
 
                             <button class="btn secondary order-cake-btn"
                                     data-cake-name="Bolo de chocolate"
                                     data-cake-message="Gostaria de encomendar um bolo de chocolate como o do portfólio (massa fofa de chocolate, cobertura generosa de chocolate derretido, formato em anel). Peso aproximado de 1 kg.">
-                                Encomendar este bolo (Pequeno)
+                                Encomendar (Pequeno)
                             </button>
                         </div>
                     </div>
@@ -162,28 +167,22 @@
 
         <!-- ENCOMENDAS -->
         <section id="encomendas" class="section section-light">
-            <div class="container two-cols">
+            <div class="container">
                 <div>
                     <h2>Como fazer a sua encomenda</h2>
                     <p>
-                        Neste momento as encomendas são feitas de forma direta, por mensagem.
-                        Escolhe o tipo de bolo, o tamanho e a data, e respondemos com a confirmação
-                        de disponibilidade e o valor final.
+                        As encomendas podem ser feitas diretamente através do formulário desta página, por WhatsApp, chamada, mensagem ou por e-mail.<br />
+                        Após recebermos o pedido, confirmamos a disponibilidade e enviamos o valor final.
                     </p>
                     <ol class="steps">
-                        <li>Escolher o sabor (por exemplo: chocolate, laranja, iogurte).</li>
-                        <li>Indicar o formato (redondo, em anel, pequeno ou grande).</li>
-                        <li>Escolher a data e a hora aproximada de entrega/levantamento.</li>
-                        <li>Enviar mensagem com estas informações.</li>
+                        <li><strong>O tipo de bolo</strong> (ex.: chocolate, laranja, iogurte).</li>
+                        <li><strong>O tamanho ou formato desejado</strong> (ex.: pequeno, grande, redondo, em anel).</li>
+                        <li><strong>A data pretendida &mdash;</strong> opcional, mas recomendada para garantir disponibilidade.</li>
+                        <li><strong>Detalhes importantes</strong> (recheio, preferências, alergias, etc.).</li>
                     </ol>
-                </div>
-                <div class="highlight-box">
-                    <h3>Pedido rápido</h3>
-                    <ul class="contact-list">
-                        <li><strong>WhatsApp:</strong> <span><a href="tel:00351913384104">913 384 104</a></span></li>
-                        <!--<li><strong>Instagram:</strong> <span>@colocar_perfil_aqui</span></li>-->
-                        <li><strong>E-mail:</strong> <span><a href="mailto:bolos@amordemae.pt">bolos@amordemae.pt</a></span></li>
-                    </ul>
+                    <p class="top-padding">
+                        No formulário, basta preencher o nome, telemóvel (para contacto rápido) e a mensagem com o pedido.
+                    </p>
                 </div>
             </div>
         </section>
@@ -222,7 +221,7 @@
                         <div class="field">
                             <label for="mensagem">Mensagem <span class="required">*</span></label>
                             <textarea id="mensagem" name="mensagem" rows="4" required
-                                      placeholder="Ex.: Gostaria de encomendar um bolo de chocolate para dia 12, de cerca de 2Kg..."></textarea>
+                                      placeholder="Ex.: Gostaria de encomendar um bolo grande de chocolate para o dia 12..."></textarea>
                         </div>
 
                         <button type="submit" class="btn primary" id="contact-submit">
@@ -241,7 +240,7 @@
                     <div class="contact-info">
                         <h3>Contactos diretos</h3>
                         <ul class="contact-list">
-                            <li><strong>WhatsApp:</strong> <span><a href="tel:00351913384104">913 384 104</a></span></li>
+                            <li><strong>Telemóvel (WhatsApp):</strong> <span><a href="tel:00351913384104">913 384 104</a></span></li>
                             <!--<li><strong>Instagram:</strong> <span>@colocar_perfil_aqui</span></li>-->
                             <li><strong>E-mail:</strong> <span><a href="mailto:bolos@amordemae.pt">bolos@amordemae.pt</a></span></li>
                         </ul>
