@@ -612,6 +612,20 @@ body {
         padding-right: 0;
     }
 }
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: inline-block;
+    }
+}
+
 
 .cake-group-info {
     /* sem cartão extra, só layout interno */
