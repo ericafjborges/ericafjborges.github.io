@@ -375,6 +375,12 @@ body {
     opacity: 0.8;
 }
 
+.form-hint {
+    font-size: 0.8rem;
+    color: #7a6a5e;
+    margin-bottom: 0.6rem;
+}
+
 .contact-info {
     padding: 0.5rem 0;
 }

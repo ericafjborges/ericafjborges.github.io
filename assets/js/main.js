@@ -40,8 +40,13 @@ if (contactForm) {
             mensagem: contactForm.mensagem.value.trim()
         };
 
+        if (!phone && !email) {
+            showStatus("Por favor, indique pelo menos um contacto (telemóvel ou e-mail).", "error");
+            return;
+        }
+
         // Validação básica extra
-        if (!formData.nome || !formData.telefone || !formData.mensagem) {
+        if (!formData.nome || !formData.mensagem) {
             showStatus("Por favor preencha nome, telemóvel e mensagem.", "error");
             return;
         }

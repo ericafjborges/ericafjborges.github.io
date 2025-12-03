@@ -5,7 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bolos Artesanais – Amor de Mãe</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
-    <meta name="description" content="Bolos artesanais feitos em casa, com cuidado e amor em cada fatia.">
+    <meta name="description" content="Bolos artesanais caseiros feitos com amor em Vila de Rei. Encomendas por WhatsApp, chamada ou no website.">
+
+    <!-- SEO -->
+    <meta name="keywords" content="bolos artesanais, bolos caseiros, bolos Vila de Rei, encomenda de bolos, bolos chocolate, Amor de Mãe bolos, bolos caseiros Portugal">
+
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn, Messenger) -->
+    <meta property="og:title" content="Bolos Artesanais em Vila de Rei | Amor de Mãe">
+    <meta property="og:description" content="Bolos caseiros feitos com amor. Encomendas rápidas por WhatsApp, chamada ou formulário.">
+    <meta property="og:image" content="https://amordemae.pt/assets/img/og-image.jpg">
+    <meta property="og:url" content="https://amordemae.pt/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bolos Artesanais – Amor de Mãe">
+    <meta name="twitter:description" content="Bolos caseiros feitos com carinho, ideais para momentos especiais.">
+    <meta name="twitter:image" content="https://amordemae.pt/assets/img/og-image.jpg">
+
+    <!-- Android / Chrome -->
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="apple-touch-icon" href="/assets/icons/icon-192.png">
+    <link rel="icon" type="image/png" href="/assets/icons/icon-192.png">
+
     <link rel="stylesheet" href="assets/css/style.css">
     <script defer src="assets/js/main.js"></script>
 </head>
@@ -116,11 +138,11 @@
                             <div class="cake-card-body">
                                 <h4>Bolo de chocolate</h4>
                                 <p>Massa fofa de chocolate com cobertura generosa de chocolate derretido.</p>
-                                <!--<p class="mobile-only">Textura rústica e caseira, ideal para quem gosta de muito chocolate.</p>-->
+                                <p class="mobile-only">Textura rústica e caseira, ideal para quem gosta de muito chocolate.</p>
                             </div>
                         </article>
 
-                        <article class="cake-card">
+                        <article class="cake-card desktop-only">
                             <img src="assets/img/bolo-chocolate-cobertura.jpg" alt="Detalhe da cobertura de chocolate">
                             <div class="cake-card-body">
                                 <h4>Detalhe da cobertura</h4>
@@ -133,11 +155,11 @@
                             <div class="cake-card-body">
                                 <h4>Bolo inteiro</h4>
                                 <p>Apresentação simples e elegante, perfeita para partilhar em família.</p>
-                                <!--<p class="mobile-only">Formato em anel com cobertura brilhante a envolver todo o bolo.</p>-->
+                                <p class="mobile-only">Formato em anel com cobertura brilhante a envolver todo o bolo.</p>
                             </div>
                         </article>
 
-                        <article class="cake-card">
+                        <article class="cake-card desktop-only">
                             <img src="assets/img/bolo-chocolate-topo.jpg" alt="Bolo de chocolate visto de topo">
                             <div class="cake-card-body">
                                 <h4>Vista de topo</h4>
@@ -204,13 +226,13 @@
                         </div>
 
                         <div class="field">
-                            <label for="data">Data Pretendida <span class="optional">(opcional)</span></label>
+                            <label for="data">Data Pretendida <span class="optional">(recomendado)</span></label>
                             <input type="date" id="data" name="data" placeholder="dd/mm/aaaa">
                         </div>
 
                         <div class="field">
-                            <label for="telefone">Telemóvel <span class="required">*</span></label>
-                            <input type="tel" id="telefone" name="telefone" placeholder="Ex.: 912 345 678" required>
+                            <label for="telefone">Telemóvel <span class="optional">(recomendado)</span></label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="Ex.: 912 345 678">
                         </div>
 
                         <div class="field">
@@ -223,6 +245,8 @@
                             <textarea id="mensagem" name="mensagem" rows="4" required
                                       placeholder="Ex.: Gostaria de encomendar um bolo grande de chocolate para o dia 12..."></textarea>
                         </div>
+
+                        <p class="form-hint">Preencha pelo menos um contacto — telemóvel ou e-mail.</p>
 
                         <button type="submit" class="btn primary" id="contact-submit">
                             Enviar
